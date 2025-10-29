@@ -1,8 +1,7 @@
-/*
+/**
  * Call to Action (CTA) Configuration
- *
- * This file contains the configuration for the CTA component.
- * Customize the call-to-action section of your portfolio.
+ * @author Samarth Shukla
+ * Configuration for the CTA component in the portfolio
  */
 
 export const ctaConfig = {
@@ -12,7 +11,7 @@ export const ctaConfig = {
 
   // CTA button settings
   linkText: 'Book a Free Call',
-  calLink: 'ramxcodes/meeting',
+  calLink: 'samarthshukla/meeting',
 
   // Pre-text message
   preText: "Hey, you scrolled this far, let's talk.",

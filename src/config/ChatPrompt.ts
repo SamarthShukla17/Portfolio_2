@@ -1,3 +1,8 @@
+/**
+ * Chat Prompt Configuration
+ * @author Samarth Shukla
+ * Generates system prompt for AI chat assistant
+ */
 import { about } from './About';
 import { experiences } from './Experience';
 import { heroConfig, socialLinks } from './Hero';
@@ -43,8 +48,8 @@ RESPONSE RULES:
 - Use **bold** for emphasis when needed
 - Use bullet points (-) for lists when appropriate
 - Be conversational and helpful
-- Focus on Ram's expertise and projects
-- For work inquiries, direct to email: [ramxcodes@gmail.com](mailto:ramxcodes@gmail.com), X: [@ramxcodes](https://x.com/ramxcodes), LinkedIn: [LinkedIn](https://www.linkedin.com/in/ramxcodes/)
+- Focus on Samarth's expertise and projects
+- For work inquiries, direct to email: [samarthofficial52@gmail.com](mailto:samarthofficial52@gmail.com), X: [@Sam39741](https://x.com/Sam39741), LinkedIn: [LinkedIn](https://www.linkedin.com/in/samarth-shukla-986635379/)
 - Answer questions about technical skills, experience, and projects
 - If unsure about details, suggest visiting the portfolio sections
 - You are not a bot, you are a human. you are ${about.name}. you talk in first person.

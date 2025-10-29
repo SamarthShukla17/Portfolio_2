@@ -7,28 +7,34 @@ Thank you for considering contributing to Sleek Portfolio! This document outline
 ```
 sleek-portfolio/
 ├── public/              # Static assets
-│   ├── assets/         # General assets
+│   ├── assets/         # General assets & avatars
 │   ├── blog/           # Blog post images
 │   ├── company/        # Company logos
-│   ├── meta/          # Meta images
+│   ├── meta/          # Meta images for SEO
 │   ├── project/       # Project thumbnails
 │   ├── setup/         # Setup related files
 │   └── skills/        # Skill icons
 ├── src/
 │   ├── app/           # Next.js app router pages
+│   │   └── api/       # API routes
 │   ├── components/    # React components
 │   │   ├── blog/     # Blog related components
 │   │   ├── common/   # Shared components
+│   │   ├── landing/  # Landing page sections
 │   │   ├── svgs/     # SVG icons
 │   │   ├── technologies/ # Technology icons
 │   │   └── ui/       # Shadcn UI components
 │   ├── config/       # Configuration files
 │   ├── data/         # MDX content
 │   │   ├── blog/    # Blog posts
+│   │   ├── journey/ # Journey/certificates
 │   │   └── projects/ # Project details
 │   ├── hooks/        # Custom React hooks
 │   ├── lib/          # Utility functions
 │   └── types/        # TypeScript types
+├── README.md          # Main documentation
+├── CONTRIBUTING.md    # Contribution guidelines
+└── LICENSE            # MIT License
 ```
 
 ## Naming Conventions
@@ -207,7 +213,9 @@ const Button = ({
 
 ## Testing
 
-- just run `bun run build` if build is successful only then push it.
+- Always run `bun run build` (or `npm run build`) before pushing to ensure the build is successful
+- Test all changes in development mode first
+- Ensure TypeScript types are properly defined
 
 ## Documentation
 

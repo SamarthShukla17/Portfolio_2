@@ -1,3 +1,17 @@
+/**
+ * Root Layout Component
+ *
+ * Developed by Samarth Shukla
+ * Portfolio Website - samarthshukla.vercel.app
+ *
+ * This layout component wraps the entire application and provides:
+ * - Theme provider for dark/light mode
+ * - Smooth scrolling with Lenis
+ * - Particle background animations
+ * - Navigation and footer components
+ * - View transitions for smooth page changes
+ */
+
 // import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
 import ChatBubble from '@/components/common/ChatBubble';
 import Footer from '@/components/common/Footer';

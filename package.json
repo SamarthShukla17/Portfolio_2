@@ -1,7 +1,9 @@
 {
-  "name": "sleek-portfolio",
-  "version": "0.1.0",
+  "name": "samarth-shukla-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "author": "Samarth Shukla",
+  "description": "Personal portfolio website developed by Samarth Shukla - showcasing projects, experience, and technical expertise",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

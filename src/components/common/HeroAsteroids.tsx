@@ -1,3 +1,12 @@
+/**
+ * HeroAsteroids Component
+ *
+ * Developed by Samarth Shukla
+ *
+ * Custom asteroid animation system with dust trails for the hero section.
+ * Features minimal asteroids with dynamic colors and smooth animations.
+ */
+
 'use client';
 
 import React, { useEffect, useRef } from 'react';

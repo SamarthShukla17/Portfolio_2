@@ -1,3 +1,12 @@
+/**
+ * ParticleBackground Component
+ *
+ * Developed by Samarth Shukla
+ *
+ * Custom constellation particle system with twinkling stars, constellation lines,
+ * and dynamic color effects. Creates an immersive space-themed background.
+ */
+
 'use client';
 
 import React, { useEffect, useRef } from 'react';

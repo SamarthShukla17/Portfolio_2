@@ -1,3 +1,12 @@
+/**
+ * Hero Component
+ *
+ * Developed by Samarth Shukla
+ *
+ * Main hero section with animated typewriter effect, avatar, and social links.
+ * Features smooth animations and modern design aesthetics.
+ */
+
 'use client';
 
 import React from 'react';

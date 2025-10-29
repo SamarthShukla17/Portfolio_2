@@ -149,23 +149,6 @@ This portfolio is configured in the `src/config` directory. Customize the follow
 - **`Cat.ts`** - Enable/disable the Oneko cat
 - **`Quote.ts`** - Random quotes configuration
 
-## 📝 Adding Content
-
-### Blog Posts
-
-1. Create a new MDX file in `src/data/blog/`
-2. Add metadata frontmatter:
-   ```mdx
-   ---
-   title: 'Your Blog Post Title'
-   description: 'A brief description'
-   date: '2024-03-20'
-   tags: ['nextjs', 'react']
-   ---
-
-   Your content here...
-   ```
-3. Add blog thumbnail in `public/blog/`
 
 ### Projects
 

@@ -1,6 +1,6 @@
 import Container from '@/components/common/Container';
 import About from '@/components/landing/About';
-import CTA from '@/components/landing/CTA';
+// import CTA from '@/components/landing/CTA';
 import Experience from '@/components/landing/Experience';
 import Github from '@/components/landing/Github';
 import Hero from '@/components/landing/Hero';

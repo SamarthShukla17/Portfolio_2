@@ -13,7 +13,7 @@
  */
 
 // import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
-import ChatBubble from '@/components/common/ChatBubble';
+// import ChatBubble from '@/components/common/ChatBubble';
 import Footer from '@/components/common/Footer';
 import HeroAsteroids from '@/components/common/HeroAsteroids';
 import Navbar from '@/components/common/Navbar';

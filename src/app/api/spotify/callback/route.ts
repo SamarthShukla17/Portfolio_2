@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const data = await spotifyApi.authorizationCodeGrant(code);
-    const { access_token, refresh_token, expires_in } = data.body;
+    const { refresh_token } = data.body;
 
     // Return a nice HTML page with the token
     const html = `

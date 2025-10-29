@@ -2,7 +2,7 @@
 
 > A modern, responsive portfolio website developed by Samarth Shukla using Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a fully custom blog system, project showcase, work experience timeline, contact form with Telegram integration, and Spotify now-playing widget.
 
-![Portfolio Preview](<img width="1281" height="835" alt="Screenshot from 2025-10-30 01-13-50" src="https://github.com/user-attachments/assets/7a755267-746f-403b-a675-6a623187e13b" />)
+![Portfolio Preview](public/meta/opengraph-image.png)
 
 
 **Live Site**: [samarthshukla.vercel.app](https://samarthshukla.vercel.app)
@@ -98,7 +98,7 @@ SPOTIFY_REFRESH_TOKEN="your-refresh-token"
 1. Clone the repository (or download if private):
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/SamarthShukla17/Portfolio_2.git
    cd sleek-portfolio
    ```
 

@@ -2,7 +2,7 @@
 
 > A modern, responsive portfolio website developed by Samarth Shukla using Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a fully custom blog system, project showcase, work experience timeline, contact form with Telegram integration, and Spotify now-playing widget.
 
-![Portfolio Preview](public/meta/opengraph-image.png)
+![Portfolio Preview](public/meta/portfolio-preview.png)
 
 
 **Live Site**: [samarthshukla.vercel.app](https://samarthshukla.vercel.app)

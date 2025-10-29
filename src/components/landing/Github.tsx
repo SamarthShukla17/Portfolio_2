@@ -22,6 +22,7 @@ export default function Github() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isUsingMockData, setIsUsingMockData] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -130,6 +131,12 @@ export default function Github() {
     }
 
     fetchData();
+
+    // Handle responsive sizing for calendar
+    const handleResize = () => setIsMobile(window.innerWidth < 640);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Format contributions for react-activity-calendar
@@ -140,7 +147,7 @@ export default function Github() {
   }));
 
   return (
-    <Container id="github" className="mt-20">
+    <Container id="github" className="mt-16 md:mt-20">
       <div className="space-y-8">
         {/* Modern Header */}
         <div className="text-center space-y-4">
@@ -161,7 +168,7 @@ export default function Github() {
 
         {/* Activity Calendar */}
         <div className="flex justify-center">
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-4 md:p-6 shadow-lg border border-slate-200 dark:border-slate-700 w-full">
             {isLoading ? (
               <div className="flex items-center justify-center h-32">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -177,11 +184,12 @@ export default function Github() {
               </div>
             ) : (
               <div className="space-y-4">
-                <ActivityCalendar
-                  data={formattedContributions}
-                  blockSize={githubConfig.blockSize}
-                  blockMargin={githubConfig.blockMargin}
-                  fontSize={githubConfig.fontSize}
+                <div className="overflow-x-auto -mx-2 md:mx-0 px-2">
+                  <ActivityCalendar
+                    data={formattedContributions}
+                    blockSize={isMobile ? 8 : githubConfig.blockSize}
+                    blockMargin={isMobile ? 2 : githubConfig.blockMargin}
+                    fontSize={isMobile ? 9 : githubConfig.fontSize}
                   colorScheme={theme === 'dark' ? 'dark' : 'light'}
                   maxLevel={githubConfig.maxLevel}
                   hideTotalCount={false}
@@ -200,10 +208,11 @@ export default function Github() {
                   style={{
                     color: theme === 'dark' ? 'rgb(139, 148, 158)' : 'rgb(107, 114, 128)',
                   }}
-                />
+                  />
+                </div>
 
                 {/* Stats */}
-                <div className="flex justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+                <div className="flex justify-center flex-wrap gap-4 md:gap-6 text-xs md:text-sm text-slate-600 dark:text-slate-400">
                   <div className="text-center">
                     <div className="font-semibold text-slate-900 dark:text-slate-100">
                       {totalContributions.toLocaleString()}

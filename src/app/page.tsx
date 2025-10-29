@@ -5,7 +5,7 @@ import Experience from '@/components/landing/Experience';
 import Github from '@/components/landing/Github';
 import Hero from '@/components/landing/Hero';
 // import PricingFlipCards from '@/components/landing/PricingFlipCards';
-import Spotify from '@/components/landing/Spotify';
+// import Spotify from '@/components/landing/Spotify';
 import Work from '@/components/landing/Projects';
 import React from 'react';
 
@@ -17,7 +17,7 @@ export default function page() {
       <Work />
       <About />
       <Github />
-      <Spotify />
+      {/* <Spotify /> */}
       {/* <CTA /> */}
     </Container>
   );

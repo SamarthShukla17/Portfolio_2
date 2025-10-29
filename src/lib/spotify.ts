@@ -109,7 +109,7 @@ export async function getListeningTimeThisMonth(refreshToken: string) {
 
     // Fetch recently played tracks - start with single request to avoid timeout
     // Spotify API limit is 50 tracks per request
-    let allItems: SpotifyApi.PlayHistoryObject[] = [];
+    const allItems: SpotifyApi.PlayHistoryObject[] = [];
 
     try {
       // First request: get tracks from month start onwards

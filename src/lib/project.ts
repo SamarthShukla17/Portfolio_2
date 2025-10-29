@@ -1,4 +1,3 @@
-import { projects } from '@/config/Projects';
 import {
   ProjectCaseStudy,
   ProjectCaseStudyFrontmatter,

@@ -1,12 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function SpotifyTestPage() {
   const [status, setStatus] = useState('Checking configuration...');
-  const [refreshToken, setRefreshToken] = useState<string | null>(null);
-  const router = useRouter();
 
   useEffect(() => {
     checkConfig();

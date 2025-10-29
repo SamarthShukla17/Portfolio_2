@@ -3,7 +3,6 @@
  * @author Samarth Shukla
  * Defines all projects displayed in the portfolio
  */
-import JavaScriptPng from '@/components/technologies/JavaScriptPng';
 import NextJsPng from '@/components/technologies/NextJsPng';
 import NodeJsPng from '@/components/technologies/NodeJsPng';
 import ReactPng from '@/components/technologies/ReactPng';

@@ -1,8 +1,10 @@
-import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
+// import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
 import ChatBubble from '@/components/common/ChatBubble';
 import Footer from '@/components/common/Footer';
+import HeroAsteroids from '@/components/common/HeroAsteroids';
 import Navbar from '@/components/common/Navbar';
 import OnekoCat from '@/components/common/OnekoCat';
+import ParticleBackground from '@/components/common/ParticleBackground';
 import { Quote } from '@/components/common/Quote';
 import { ThemeProvider } from '@/components/common/ThemeProviders';
 import { generateMetadata as getMetadata } from '@/config/Meta';
@@ -21,6 +23,10 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <link rel="icon" href="/assets/image.png" type="image/png" />
+          <link rel="shortcut icon" href="/assets/image.png" type="image/png" />
+        </head>
         <body className={`font-hanken-grotesk antialiased`}>
           <ThemeProvider
             attribute="class"
@@ -29,13 +35,15 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ReactLenis root>
+              <ParticleBackground />
+              <HeroAsteroids />
               <Navbar />
               {children}
               <OnekoCat />
               <Quote />
               <Footer />
-              <ChatBubble />
-              <UmamiAnalytics />
+              {/* <ChatBubble /> */}
+              {/* <UmamiAnalytics /> */}
             </ReactLenis>
           </ThemeProvider>
         </body>

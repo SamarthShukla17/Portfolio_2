@@ -6,17 +6,17 @@
  */
 
 export const githubConfig = {
-  username: 'ramxcodes',
-  apiUrl: 'https://github-contributions-api.deno.dev',
+  username: 'SamarthShukla17',
+  apiUrl: 'https://github-contributions-api.jogruber.de/v4',
 
   // Display settings
   title: 'GitHub Activity',
   subtitle: 'coding journey over the past year',
 
   // Chart settings
-  blockSize: 11,
+  blockSize: 12,
   blockMargin: 3,
-  fontSize: 12,
+  fontSize: 11,
   maxLevel: 4,
 
   // Month labels
@@ -41,21 +41,21 @@ export const githubConfig = {
   // Total count label template
   totalCountLabel: '{{count}} contributions in the last year',
 
-  // Theme configuration for dark and light modes
+  // Theme configuration for dark and light modes (GitHub's exact colors)
   theme: {
     dark: [
-      'rgb(22, 27, 34)', // Very dark for no contributions
-      'rgb(14, 68, 41)', // Dark green
-      'rgb(0, 109, 50)', // Medium green
-      'rgb(38, 166, 65)', // Bright green
-      'rgb(57, 211, 83)', // Very bright green
+      '#161b22', // GitHub dark mode - no contributions
+      '#0e4429', // GitHub dark mode - level 1
+      '#006d32', // GitHub dark mode - level 2
+      '#26a641', // GitHub dark mode - level 3
+      '#39d353', // GitHub dark mode - level 4
     ],
     light: [
-      'rgb(235, 237, 240)', // Light gray
-      'rgb(155, 233, 168)', // Light green
-      'rgb(64, 196, 99)', // Medium green
-      'rgb(48, 161, 78)', // Dark green
-      'rgb(33, 110, 57)', // Very dark green
+      '#ebedf0', // GitHub light mode - no contributions
+      '#9be9a8', // GitHub light mode - level 1
+      '#40c463', // GitHub light mode - level 2
+      '#30a14e', // GitHub light mode - level 3
+      '#216e39', // GitHub light mode - level 4
     ],
   },
 

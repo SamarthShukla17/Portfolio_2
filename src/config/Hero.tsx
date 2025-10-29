@@ -28,15 +28,22 @@ import LinkedIn from '@/components/svgs/LinkedIn';
 import Mail from '@/components/svgs/Mail';
 import X from '@/components/svgs/X';
 import Bun from '@/components/technologies/Bun';
+import CSS from '@/components/technologies/CSS';
+import ExpressJs from '@/components/technologies/ExpressJs';
+import GithubTech from '@/components/technologies/Github';
+import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
+import NestJs from '@/components/technologies/NestJs';
+import Netlify from '@/components/technologies/Netlify';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
-// Technology Components
+import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
+import Vercel from '@/components/technologies/Vercel';
 
 // Component mapping for skills
 export const skillComponents = {
@@ -49,18 +56,31 @@ export const skillComponents = {
   MongoDB: MongoDB,
   Prisma: Prisma,
   JavaScript: JavaScript,
+  CSS: CSS,
+  Html: Html,
+  ExpressJs: ExpressJs,
+  NestJs: NestJs,
+  TailwindCss: TailwindCss,
+  Vercel: Vercel,
+  Netlify: Netlify,
+  GithubTech: GithubTech,
 };
 
 export const heroConfig = {
   // Personal Information
-  name: 'Ram',
+  name: 'Samarth',
   title: 'A Full Stack web developer.',
-  avatar: '/assets/logo.png',
+  avatar: '/assets/image.png',
 
   // Skills Configuration
   skills: [
     {
-      name: 'Typescript',
+      name: 'JavaScript',
+      href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      component: 'JavaScript',
+    },
+    {
+      name: 'TypeScript',
       href: 'https://www.typescriptlang.org/',
       component: 'TypeScript',
     },
@@ -75,21 +95,151 @@ export const heroConfig = {
       component: 'NextJs',
     },
     {
-      name: 'Bun',
-      href: 'https://bun.sh/',
-      component: 'Bun',
+      name: 'Node.js',
+      href: 'https://nodejs.org/',
+      component: 'NodeJs',
+    },
+    {
+      name: 'Express.js',
+      href: 'https://expressjs.com/',
+      component: 'ExpressJs',
+    },
+    {
+      name: 'NestJS',
+      href: 'https://nestjs.com/',
+      component: 'NestJs',
+    },
+    {
+      name: 'MongoDB',
+      href: 'https://www.mongodb.com/',
+      component: 'MongoDB',
     },
     {
       name: 'PostgreSQL',
       href: 'https://www.postgresql.org/',
       component: 'PostgreSQL',
     },
+    {
+      name: 'Prisma',
+      href: 'https://www.prisma.io/',
+      component: 'Prisma',
+    },
+    {
+      name: 'Tailwind CSS',
+      href: 'https://tailwindcss.com/',
+      component: 'TailwindCss',
+    },
+    {
+      name: 'CSS3',
+      href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+      component: 'CSS',
+    },
+    {
+      name: 'HTML5',
+      href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+      component: 'Html',
+    },
+    {
+      name: 'Bun',
+      href: 'https://bun.sh/',
+      component: 'Bun',
+    },
+    {
+      name: 'Vercel',
+      href: 'https://vercel.com/',
+      component: 'Vercel',
+    },
+    {
+      name: 'Netlify',
+      href: 'https://www.netlify.com/',
+      component: 'Netlify',
+    },
+    {
+      name: 'Git',
+      href: 'https://git-scm.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'C',
+      href: 'https://en.wikipedia.org/wiki/C_(programming_language)',
+      component: 'GithubTech',
+    },
+    {
+      name: 'C++',
+      href: 'https://isocpp.org/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Java',
+      href: 'https://www.java.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Ruby',
+      href: 'https://www.ruby-lang.org/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Rails',
+      href: 'https://rubyonrails.org/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'MySQL',
+      href: 'https://www.mysql.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Redis',
+      href: 'https://redis.io/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Firebase',
+      href: 'https://firebase.google.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Cloudflare',
+      href: 'https://www.cloudflare.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Vue.js',
+      href: 'https://vuejs.org/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Vite',
+      href: 'https://vitejs.dev/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'SASS',
+      href: 'https://sass-lang.com/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'WordPress',
+      href: 'https://wordpress.org/',
+      component: 'GithubTech',
+    },
+    {
+      name: 'GitHub Actions',
+      href: 'https://github.com/features/actions',
+      component: 'GithubTech',
+    },
+    {
+      name: 'Notion',
+      href: 'https://www.notion.so/',
+      component: 'GithubTech',
+    },
   ],
 
   // Description Configuration
   description: {
     template:
-      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With a focus on <b>UI</b> design. Enthusiastic about <b>Three.js</b>, driven by a keen eye for design.',
+      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With expertise in <b>full-stack development</b> and <b>open source contributions</b>. Passionate about <b>Front-End Web Development</b> and continuous learning.',
   },
 
   // Buttons Configuration
@@ -102,8 +252,8 @@ export const heroConfig = {
     },
     {
       variant: 'default',
-      text: 'Get in touch',
-      href: '/contact',
+      text: 'Hire Me',
+      href: 'https://www.upwork.com/freelancers/~01ff3911eac4cf278a?mp_source=share',
       icon: 'Chat',
     },
   ],
@@ -113,22 +263,22 @@ export const heroConfig = {
 export const socialLinks = [
   {
     name: 'X',
-    href: 'https://x.com/ramxcodes',
+    href: 'https://x.com/Sam39741',
     icon: <X />,
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramxcodes/',
+    href: 'https://www.linkedin.com/in/samarth-shukla-986635379/',
     icon: <LinkedIn />,
   },
   {
     name: 'Github',
-    href: 'https://github.com/ramxcodes',
+    href: 'https://github.com/SamarthShukla17',
     icon: <Github />,
   },
   {
     name: 'Email',
-    href: 'mailto:ramxcodes@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&to=samarthofficial52@gmail.com',
     icon: <Mail />,
   },
 ];

@@ -1,3 +1,8 @@
+/**
+ * Container Component
+ * @author Samarth Shukla
+ * Wrapper component for consistent page layout with support for id prop
+ */
 import React from 'react';
 
 export default function Container({
@@ -7,6 +12,7 @@ export default function Container({
 }: {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }) {
   return (
     <div

@@ -1,11 +1,19 @@
-import { catConfig } from '@/config/Cat';
+'use client';
+
+import { petConfig } from '@/config/Cat';
 import Script from 'next/script';
 import React from 'react';
 
 export default function OnekoCat() {
-  if (!catConfig.enabled) {
+  if (!petConfig.enabled) {
     return null;
   }
 
-  return <Script src="./oneko/oneko.js" data-cat="./oneko/oneko.gif" />;
+  return (
+    <Script
+      src="/oneko/oneko.js"
+      data-cat="/oneko/oneko.gif"
+      strategy="afterInteractive"
+    />
+  );
 }

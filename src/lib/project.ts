@@ -126,47 +126,6 @@ export function getAllTechnologies(): string[] {
   return Array.from(technologiesSet).sort();
 }
 
-/**
- * Get project navigation (next/previous) based on config Projects order
- */
-export function getProjectNavigation(currentSlug: string): {
-  previous: { title: string; slug: string } | null;
-  next: { title: string; slug: string } | null;
-} {
-  // Find current project in config
-  const currentProjectIndex = projects.findIndex(
-    (project) => project.projectDetailsPageSlug === `/projects/${currentSlug}`,
-  );
-
-  if (currentProjectIndex === -1) {
-    return { previous: null, next: null };
-  }
-
-  const previousProject =
-    currentProjectIndex > 0 ? projects[currentProjectIndex - 1] : null;
-  const nextProject =
-    currentProjectIndex < projects.length - 1
-      ? projects[currentProjectIndex + 1]
-      : null;
-
-  return {
-    previous: previousProject
-      ? {
-          title: previousProject.title,
-          slug: previousProject.projectDetailsPageSlug.replace(
-            '/projects/',
-            '',
-          ),
-        }
-      : null,
-    next: nextProject
-      ? {
-          title: nextProject.title,
-          slug: nextProject.projectDetailsPageSlug.replace('/projects/', ''),
-        }
-      : null,
-  };
-}
 
 /**
  * Get related project case studies based on technologies (excluding the current one)

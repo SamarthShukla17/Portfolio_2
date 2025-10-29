@@ -1,3 +1,8 @@
+/**
+ * Project Type Definition
+ * @author Samarth Shukla
+ * Defines the structure for project data displayed in cards
+ */
 export interface Project {
   title: string;
   description: string;
@@ -7,9 +12,9 @@ export interface Project {
   technologies: { name: string; icon: React.ReactNode }[];
   github?: string;
   live: string;
-  details: boolean;
-  projectDetailsPageSlug: string;
   isWorking: boolean;
+  status?: 'live' | 'building' | 'maintenance';
+  showWebLink?: boolean;
 }
 
 export interface ProjectCaseStudyFrontmatter {

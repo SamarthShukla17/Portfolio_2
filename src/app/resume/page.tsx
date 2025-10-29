@@ -29,15 +29,31 @@ export default function ResumePage() {
             Resume
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            My resume.
+            My resume and professional experience.
           </p>
         </div>
         <Separator />
-        <div className="mx-auto max-w-2xl">
-          <iframe
-            src={resumeConfig.url}
-            className="w-full min-h-screen"
-          ></iframe>
+        <div className="mx-auto max-w-4xl">
+          <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl bg-slate-50 dark:bg-slate-900">
+            <iframe
+              src={resumeConfig.url}
+              className="w-full min-h-[900px]"
+              title="Resume PDF"
+              allow="fullscreen"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href={resumeConfig.url}
+              download
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm bg-slate-900 dark:bg-slate-100 text-slate-50 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
     </Container>

@@ -31,21 +31,21 @@ export default function Hero() {
 
       {/* Main Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* Left Column - Content */}
           <div className="text-left space-y-8">
             {/* Greeting */}
             <div className="space-y-2">
-              <p className="text-lg text-slate-600 dark:text-slate-400 font-medium">Hello, I&apos;m</p>
-              <h1 className="text-6xl md:text-8xl font-bold text-slate-600 dark:text-slate-400 leading-tight tracking-tight">
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium">Hello, I&apos;m</p>
+              <h1 className="text-5xl md:text-8xl font-bold text-slate-600 dark:text-slate-400 leading-tight tracking-tight">
                 Samarth
               </h1>
             </div>
 
             {/* Dynamic Title */}
-            <div className="h-16 flex items-center">
-              <div className="text-2xl md:text-3xl text-slate-700 dark:text-slate-300 font-medium">
+            <div className="h-12 md:h-16 flex items-center">
+              <div className="text-xl md:text-3xl text-slate-700 dark:text-slate-300 font-medium">
                 <Typewriter
                   texts={typewriterTexts}
                   speed={100}
@@ -69,7 +69,7 @@ export default function Hero() {
             </div>
 
             {/* Social Links - Modern Grid */}
-            <div className="grid grid-cols-4 gap-4 max-w-md">
+            <div className="grid grid-cols-4 sm:grid-cols-5 gap-3 md:gap-4 max-w-md">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -91,12 +91,12 @@ export default function Hero() {
             </div>
 
             {/* Action Buttons - Minimal Premium */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               {heroConfig.buttons.map((button, index) => (
                 <a
                   key={index}
                   href={button.href}
-                  className={`group relative px-8 py-4 rounded-lg font-medium transition-all duration-200 tracking-tight ${
+                  className={`group relative px-6 py-3 md:px-8 md:py-4 rounded-lg font-medium transition-all duration-200 tracking-tight ${
                     button.variant === 'default'
                       ? 'bg-slate-900 dark:bg-slate-100 text-slate-50 dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 shadow-sm hover:shadow-md'
                       : 'border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/50'

@@ -12,8 +12,8 @@ export default function About() {
       <SectionHeading subHeading="About" heading="Me" />
 
       {/* Modern About Section */}
-      <div className="mt-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="mt-12 md:mt-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
 
           {/* Left Column - Image */}
           <div className="flex justify-center lg:justify-start">
@@ -32,17 +32,17 @@ export default function About() {
           </div>
 
           {/* Right Column - Content */}
-          <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
             {/* Name */}
             <div>
-              <h3 className="text-4xl md:text-5xl font-light text-slate-900 dark:text-slate-100 tracking-tight">
+              <h3 className="text-3xl md:text-5xl font-light text-slate-900 dark:text-slate-100 tracking-tight">
                 {about.name}
               </h3>
             </div>
 
             {/* Description */}
             <div className="space-y-4">
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                 {about.description}
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function About() {
               </div>
 
               {/* Minimal Skills Grid */}
-              <div className="grid grid-cols-5 gap-3">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
                 {mySkills.map((skill) => (
                   <Tooltip key={skill.key}>
                     <TooltipTrigger asChild>

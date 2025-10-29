@@ -34,7 +34,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
 
   return (
-    <Card className="group h-full w-full overflow-hidden transition-all duration-500 p-0 border-0 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md shadow-lg hover:shadow-2xl hover:scale-105">
+    <Card className="group h-full w-full overflow-hidden transition-all duration-500 p-0 border-0 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md shadow-lg hover:shadow-2xl md:hover:scale-105">
       <CardHeader className="p-0">
         <div className="group relative aspect-video overflow-hidden rounded-t-2xl">
           <Image
@@ -83,14 +83,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardHeader>
 
-      <CardContent className="px-6 py-6">
+      <CardContent className="px-5 md:px-6 py-6">
         <div className="space-y-6">
           {/* Project Header - Title and Icons */}
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="text-xl font-bold leading-tight">
+          <div className="flex items-start justify-between gap-3 md:gap-4">
+            <h3 className="text-lg md:text-xl font-bold leading-tight">
               {project.title}
             </h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               {project.showWebLink && (
                 <Tooltip>
                   <TooltipTrigger>

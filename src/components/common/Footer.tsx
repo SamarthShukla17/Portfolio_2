@@ -10,9 +10,9 @@ import { footerConfig } from '@/config/Footer';
 
 export default function Footer() {
   return (
-    <Container className="py-16">
-      <div className="flex flex-col items-center justify-center">
-        <p className="text-sm text-secondary text-center">
+    <Container className="py-12 md:py-16">
+      <div className="flex flex-col items-center justify-center px-4">
+        <p className="text-xs md:text-sm text-secondary text-center">
           {footerConfig.text} <b>{footerConfig.developer}</b>
         </p>
       </div>

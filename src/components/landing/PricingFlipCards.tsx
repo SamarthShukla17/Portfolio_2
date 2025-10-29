@@ -39,7 +39,7 @@ export default function PricingFlipCards() {
   };
 
   return (
-    <Container id="services" className="mt-20">
+    <Container id="services" className="mt-16 md:mt-20">
       <div className="space-y-16">
         {/* Header */}
         <div className="text-center space-y-6">
@@ -67,7 +67,7 @@ export default function PricingFlipCards() {
 
         {/* 2x2 Flip Cards Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             {pricingTiers.map((tier) => {
               const isFlipped = flippedCards.has(tier.id);
               const IconComponent = iconMap[tier.icon as keyof typeof iconMap];
@@ -78,7 +78,7 @@ export default function PricingFlipCards() {
                   className="group perspective-1000"
                   onClick={() => handleCardFlip(tier.id)}
                 >
-                  <div className={`relative w-full h-[500px] transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
+                  <div className={`relative w-full h-[420px] sm:h-[460px] md:h-[500px] transition-transform duration-700 transform-style-preserve-3d cursor-pointer ${
                     isFlipped ? 'rotate-y-180' : ''
                   }`}>
                     {/* Front of Card */}
@@ -88,21 +88,21 @@ export default function PricingFlipCards() {
                         <div className={`absolute -inset-2 rounded-3xl bg-gradient-to-r ${tier.color} opacity-20 blur-lg group-hover:opacity-30 transition-opacity duration-700`} />
 
                         {/* Main Card */}
-                        <div className={`relative p-8 rounded-3xl glass-premium shadow-2xl hover:shadow-3xl card-premium-hover transition-all duration-700 h-full flex flex-col overflow-hidden`}>
+                        <div className={`relative p-6 md:p-8 rounded-3xl glass-premium shadow-2xl hover:shadow-3xl card-premium-hover transition-all duration-700 h-full flex flex-col overflow-hidden`}>
 
                           {/* Header Section */}
                           <div className="text-center space-y-4 mb-6">
                             {/* Icon with Animated Ring */}
-                            <div className="relative mx-auto w-20 h-20">
+                            <div className="relative mx-auto w-16 h-16 md:w-20 md:h-20">
                               <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${tier.color} opacity-20 animate-spin-slow`} />
                               <div className={`relative w-full h-full rounded-full bg-gradient-to-r ${tier.color} flex items-center justify-center text-white shadow-2xl`}>
-                                <IconComponent className="w-10 h-10" />
+                                <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
                               </div>
                             </div>
 
                             {/* Title and Description */}
                             <div className="space-y-2">
-                              <h3 className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent">
+                              <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent">
                                 {tier.name}
                               </h3>
                               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm mx-auto">
@@ -113,8 +113,8 @@ export default function PricingFlipCards() {
 
                           {/* Pricing Section */}
                           <div className="text-center mb-6">
-                            <div className="inline-flex items-baseline gap-2 p-4 rounded-2xl bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 shadow-inner border border-slate-200/50 dark:border-slate-600/50">
-                              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                            <div className="inline-flex items-baseline gap-2 p-3 md:p-4 rounded-2xl bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 shadow-inner border border-slate-200/50 dark:border-slate-600/50">
+                              <span className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">
                                 {tier.price === 'Custom Pricing' ? tier.price : `${pricingConfig.currency}${tier.price}`}
                               </span>
                               <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">
@@ -125,7 +125,7 @@ export default function PricingFlipCards() {
 
                           {/* Flip Hint */}
                           <div className="text-center mt-auto">
-                            <div className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+                            <div className="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 text-xs md:text-sm">
                               <span>Click to know more</span>
                               <div className="w-4 h-4 border-2 border-slate-400 rounded-full animate-bounce">
                                 <div className="w-2 h-2 bg-slate-400 rounded-full m-0.5"></div>
@@ -143,14 +143,14 @@ export default function PricingFlipCards() {
                         <div className={`absolute -inset-2 rounded-3xl bg-gradient-to-r ${tier.color} opacity-20 blur-lg group-hover:opacity-30 transition-opacity duration-700`} />
 
                         {/* Main Card */}
-                        <div className={`relative p-12 rounded-3xl glass-premium shadow-2xl hover:shadow-3xl card-premium-hover transition-all duration-700 h-full overflow-hidden`}>
+                        <div className={`relative p-6 md:p-10 rounded-3xl glass-premium shadow-2xl hover:shadow-3xl card-premium-hover transition-all duration-700 h-full overflow-hidden`}>
                           {/* Header */}
-                          <div className="text-center mb-8">
-                            <h3 className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent mb-4">
+                          <div className="text-center mb-6 md:mb-8">
+                            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent mb-4">
                               {tier.name}
                             </h3>
-                            <div className="inline-flex items-baseline gap-2 p-3 rounded-xl bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 shadow-inner border border-slate-200/50 dark:border-slate-600/50">
-                              <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                            <div className="inline-flex items-baseline gap-2 p-2 md:p-3 rounded-xl bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 shadow-inner border border-slate-200/50 dark:border-slate-600/50">
+                              <span className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">
                                 {tier.price === 'Custom Pricing' ? tier.price : `${pricingConfig.currency}${tier.price}`}
                               </span>
                               <span className="text-slate-600 dark:text-slate-400 font-medium text-sm">
@@ -160,7 +160,7 @@ export default function PricingFlipCards() {
                           </div>
 
                           {/* Features List */}
-                          <div className="space-y-3 mb-8">
+                          <div className="space-y-3 mb-6 md:mb-8">
                             {tier.features.map((feature, index) => (
                               <div key={index} className="flex items-start gap-3 group/feature">
                                 <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center mt-0.5 shadow-lg">
@@ -180,7 +180,7 @@ export default function PricingFlipCards() {
                                 e.stopPropagation();
                                 handleContact(tier.name);
                               }}
-                              className={`w-full btn-premium hover:shadow-xl text-white font-bold px-6 py-4 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden group/btn text-base focus-premium`}
+                              className={`w-full btn-premium hover:shadow-xl text-white font-bold px-5 py-3 md:px-6 md:py-4 rounded-xl transition-all duration-500 hover:scale-105 relative overflow-hidden group/btn text-sm md:text-base focus-premium`}
                             >
                               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
                               <span className="relative z-10">Get Started</span>
@@ -241,18 +241,18 @@ export default function PricingFlipCards() {
           </div>
 
           {/* Custom Project CTA */}
-          <div className="relative p-12 rounded-3xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border border-blue-200/50 dark:border-blue-700/50 backdrop-blur-xl shadow-2xl">
+          <div className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 border border-blue-200/50 dark:border-blue-700/50 backdrop-blur-xl shadow-2xl">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/5 to-purple-500/5" />
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
                 Need Something Different?
               </h3>
-              <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Have a unique frontend requirement? Let&apos;s discuss your specific needs and create a tailored solution with your preferred technology stack.
               </p>
               <Button
                 onClick={() => handleContact('Custom Development')}
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:shadow-2xl text-white font-bold px-12 py-4 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-3xl relative overflow-hidden group/btn"
+                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:shadow-2xl text-white font-bold px-8 py-3 md:px-12 md:py-4 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-3xl relative overflow-hidden group/btn text-sm md:text-base"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
                 <span className="relative z-10">Discuss Custom Project</span>

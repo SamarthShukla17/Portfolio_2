@@ -92,10 +92,10 @@ export default function Spotify() {
   }
 
   return (
-    <Container className="mt-20">
+    <Container className="mt-16 md:mt-20">
       <SectionHeading subHeading="Music" heading="Spotify Activity" />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
         {/* Currently Listening */}
         {isListening && currentlyPlaying?.item && (

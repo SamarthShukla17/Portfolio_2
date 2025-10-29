@@ -4,7 +4,7 @@ import About from '@/components/landing/About';
 import Experience from '@/components/landing/Experience';
 import Github from '@/components/landing/Github';
 import Hero from '@/components/landing/Hero';
-import PricingFlipCards from '@/components/landing/PricingFlipCards';
+// import PricingFlipCards from '@/components/landing/PricingFlipCards';
 import Spotify from '@/components/landing/Spotify';
 import Work from '@/components/landing/Projects';
 import React from 'react';

@@ -47,9 +47,9 @@ export default function SpotifyTestPage() {
               <div className="p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg text-sm text-gray-300">
                 <p className="mb-2">📝 <strong>After authorization:</strong></p>
                 <ol className="list-decimal list-inside space-y-1 ml-2">
-                  <li>You'll be redirected to Spotify login</li>
-                  <li>Login and click "Agree"</li>
-                  <li>You'll be redirected back here</li>
+                  <li>You&apos;ll be redirected to Spotify login</li>
+                  <li>Login and click &quot;Agree&quot;</li>
+                  <li>You&apos;ll be redirected back here</li>
                   <li>Copy the refresh_token shown</li>
                   <li>Add it to your .env file</li>
                 </ol>

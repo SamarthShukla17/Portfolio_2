@@ -5,7 +5,7 @@
 ![Portfolio Preview](public/meta/portfolio-preview.png)
 
 
-**Live Site**: [samarthshukla.vercel.app](https://samarthshukla.vercel.app)
+**Live Site**: [samarthshukla.vercel.app](https://portfolio-dev-ten-lovat.vercel.app/)
 
 ---
 

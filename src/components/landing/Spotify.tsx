@@ -75,7 +75,37 @@ export default function Spotify() {
   }
 
   if (error || !data) {
-    return null; // Don't show section if error or no data
+    return (
+      <Container className="mt-16 md:mt-20">
+        <SectionHeading subHeading="Music" heading="Spotify Activity" />
+        <div className="mt-8 md:mt-12">
+          <div className="relative p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h3 className="font-semibold text-slate-900 dark:text-slate-100">Spotify not connected</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  Configure Spotify credentials and refresh token to display activity.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="/api/spotify/auth"
+                  className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-90"
+                >
+                  Connect Spotify
+                </a>
+                <a
+                  href="/spotify-test"
+                  className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900/50"
+                >
+                  Test Setup
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    );
   }
 
   const { currentlyPlaying, recentlyPlayed } = data;

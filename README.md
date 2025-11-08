@@ -324,5 +324,6 @@ This portfolio represents my personal work and showcases my expertise in modern 
 ---
 
 **Developed with ❤️ by Samarth Shukla**
+*Inspired by Ramxcode's portfolio*
 
 *Portfolio v1.0 - Built with Next.js 15, TypeScript, and Tailwind CSS*
